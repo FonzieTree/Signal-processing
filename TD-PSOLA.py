@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 sr, data  = wavfile.read('test.wav', mmap=False)
-win = 0.02
+win = 0.05
 num_samples = len(data)
 step_size = int(0.5*win*sr)
 N = math.ceil(num_samples/step_size)
