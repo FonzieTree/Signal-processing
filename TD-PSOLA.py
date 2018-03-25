@@ -1,3 +1,5 @@
+#Charpentier, F.; Stella, M. (Apr 1986). "Diphone synthesis using an overlap-add technique for speech waveforms concatenation". Acoustics, Speech, and Signal Processing, IEEE International Conference on ICASSP'86. 11: 2015–2018. doi:10.1109/ICASSP.1986.1168657
+#Author:fangshuming519@gmail.com
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
 import numpy as np
