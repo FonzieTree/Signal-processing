@@ -1,5 +1,5 @@
-#Paul Boersma, Accurate short-term analysis of the fundamental frequency and the harmonics-to-noise ratio of a sampled sound, 
-#Institute of Phonetic Sciences, University of Amsterdam, Proceedings 17 (1993), 97-110.
+#Paul Boersma, Accurate short-term analysis of the fundamental frequency and the harmonics-to-noise ratio of a sampled sound, Institute of Phonetic Sciences, University of Amsterdam, Proceedings 17 (1993), 97-110.
+#Author: fangshuming519@gmail.com
 T=0.024
 t=seq(by=0.0001, from=0, to=T)
 x=(1+0.3*sin(2*pi*140*t))*sin(2*pi*280*t)
