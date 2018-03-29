@@ -12,7 +12,15 @@ N = math.ceil(num_samples/step_size)
 padding_num = int(N*step_size)-num_samples
 data = np.concatenate((data,np.array([0]*padding_num)))
 frames = np.zeros((N-1,step_size*2))
-w = 0.5-0.5*np.cos(2*np.pi*(np.arange(-step_size,step_size)+step_size)/(step_size-1))
+#w = 0.5-0.5*np.cos(2*np.pi*(np.arange(-step_size,step_size)+step_size)/(step_size-1))
+#AK Datta, 2017. The Extended Bell Function. Epoch Synchronous Overlap Add (ESOLA): A Concatenative Synthesis Procedure for Speech, page 52.
+k1 = 0.125
+k2 = 0.875
+win_size = step_size * 2
+w1 = 0.5-0.5*np.cos(np.pi*(np.arange(0,k1*win_size))/(k1*win_size))
+w2 = np.ones(int(((k2-k1)*win_size)))
+w3 = 0.5*(1+np.cos(np.pi*(np.arange(k2*win_size,win_size))/(k1*win_size)+np.pi*(2-3*k2)/(k1)))
+w = np.concatenate((w1,w2,w3))
 #plt.plot(w)
 #plt.show()
 for i in range(N-1):
